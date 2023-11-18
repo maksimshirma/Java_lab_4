@@ -41,7 +41,7 @@ public class Person
         gender = "";
         salary = 0.0;
         birthDate = "";
-        division = new Division("", 0);
+        division = new Division("");
     }
 
     /**
@@ -49,19 +49,18 @@ public class Person
      * @param id - person`s id.
      * @param name - person`s name.
      * @param gender - person`s gender.
-     * @param salary - person`s salary.
-     * @param birthDate - person`s birthdate.
-     * @param divisionTitle - person`s division title.
-     * @param divisionId - person`s division id.
+     * @param birthDate - person`s birthdate
+     * @param division - person`s division.
+     * @param salary - person`s salary..
      */
-    Person(int id, String name, String gender, Double salary, String birthDate, String divisionTitle, int divisionId)
+    Person(int id, String name, String gender, String birthDate, Division division, Double salary)
     {
         this.id = id;
         this.name = name;
         this.gender = gender;
         this.salary = salary;
         this.birthDate = birthDate;
-        this.division = new Division(divisionTitle, divisionId);
+        this.division = division;
     }
 
     /**
@@ -70,12 +69,12 @@ public class Person
      */
     @Override
     public String toString() {
-        return this.id + "; " +
-                this.name + "; " +
-                this.gender + "; " +
-                this.salary.toString() + "; " +
-                this.birthDate + "; " +
-                this.division.getTitle() + "; " +
+        return "id: " + this.id + "; name: " +
+                this.name + "; gender: " +
+                this.gender + "; salary: " +
+                this.salary.toString() + "; birthdate: " +
+                this.birthDate + "; division`s title: " +
+                this.division.getTitle() + "; division`s id: " +
                 this.division.getId();
     }
 }

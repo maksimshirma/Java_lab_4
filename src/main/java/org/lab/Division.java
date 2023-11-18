@@ -1,5 +1,7 @@
 package org.lab;
 
+import java.util.Random;
+
 public class Division
 {
     /**
@@ -15,12 +17,12 @@ public class Division
     /**
      * Class Constructor.
      * @param title - division title.
-     * @param id - division id.
      */
-    public Division(String title, int id)
+    public Division(String title)
     {
         this.title = title;
-        this.id = id;
+        Random random = new Random();
+        this.id = random.nextInt(25000);
     }
 
     /**

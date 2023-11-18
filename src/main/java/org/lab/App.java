@@ -4,6 +4,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        ReadCVS readCVS = new ReadCVS();
+        readCVS.read("C:\\Users\\maksi\\Downloads\\foreign_names.csv", ";");
+        System.out.println(readCVS.toString());
     }
 }
